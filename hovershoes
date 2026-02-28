@@ -110,7 +110,7 @@ read -p "Encrypt-after-edit or Decrypt? (e/d) " choice
             if [ $ret -eq 0 ]; then
                 echo -e "${GREEN}Successfully decrypted!${ENDCOLOR}"
                 sleep 0.5
-                gpg -q -d "$gpgfile" | LESSHISTFILE=- less
+                gpg -q -d "$gpgfile" | LESSHISTFILE=- less -i
             else
                 echo -e "${RED}Failed to decrypt '$gpgfile'!${ENDCOLOR}"
                 exit;
