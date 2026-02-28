@@ -74,7 +74,6 @@ if [ ! -f "$1" ]; then
 fi
 
 tmpfile=$(umask 077 && mktemp /dev/shm/tempfile.XXXXXX)
-ls -l "$tmpfile"
 gpgfile="$1"
 
 while true; do
