@@ -113,8 +113,8 @@ read -p "Encrypt-after-edit or Decrypt? (e/d) " choice
                 gpg -q -d "$gpgfile" | LESSHISTFILE=- less -i --incsearch
             else
                 echo -e "${RED}Failed to decrypt '$gpgfile'!${ENDCOLOR}"
-                exit;
             fi
+            goto_shred
             break
         ;;
         * ) echo -e "Please answer e or d";;
